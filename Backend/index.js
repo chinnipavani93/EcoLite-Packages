@@ -10,7 +10,19 @@ dotenv.config();
 const app = express();
 
 //MIDDLEWARES
-app.use(cors());
+//app.use(cors());
+//const cors = require("cors");
+
+app.use(
+  cors({
+    origin: [
+      "https://eco-lite-packages.vercel.app", // Your frontend link
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true, // If using cookies or authentication headers
+  })
+);
+
 app.use(express.json());
 
 //ROUTES
