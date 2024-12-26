@@ -12,13 +12,17 @@ const app = express();
 //MIDDLEWARES
 //app.use(cors());
 //const cors = require("cors");
-
+const allowedOrigins = ['https://frontend-4xrayjtou-chinni-pavanis-projects.vercel.app/', 'https://eco-lite-packages.vercel.app/'];
 app.use(
   cors({
-    origin: [
-      "https://frontend-4xrayjtou-chinni-pavanis-projects.vercel.app//", // Your frontend link
-    ],
+    origin: function (origin, callback){
+      //"https://frontend-4xrayjtou-chinni-pavanis-projects.vercel.app/", // Your frontend link
+      if (allowedOrigins.indexOf(origin) !== -1 || !origin){
+        callback(null, true); } else { callback(new Error('Not allowed by CORS'));
+        }
+    },
     methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: 'Content-Type,Authorization',
     credentials: true, // If using cookies or authentication headers
   })
 );
