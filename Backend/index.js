@@ -12,7 +12,11 @@ const app = express();
 //MIDDLEWARES
 //app.use(cors());
 //const cors = require("cors");
-const allowedOrigins = ['https://frontend-4xrayjtou-chinni-pavanis-projects.vercel.app/', 'https://eco-lite-packages.vercel.app/'];
+const allowedOrigins = [
+    'https://frontend-4xrayjtou-chinni-pavanis-projects.vercel.app',
+    'https://eco-lite-packages.vercel.app',
+    'http://localhost:5173', // Add local development URL
+  ];
 app.use(
   cors({
     origin: function (origin, callback){
