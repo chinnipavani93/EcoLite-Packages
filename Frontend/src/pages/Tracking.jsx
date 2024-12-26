@@ -9,7 +9,7 @@ const Tracking = () => {
 
   const handleTrack = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/v1/parcels/track/${trackingId}`);
+      const response = await axios.get(`https://eco-lite-packages-5f4j.vercel.app/api/v1/parcels/track/${trackingId}`);
       setParcel(response.data);
       setError("");
     } catch (err) {
