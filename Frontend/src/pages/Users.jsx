@@ -8,7 +8,7 @@ const Users = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("https://eco-lite-packages-5f4j.vercel.app/api/v1/users");
+        const response = await axios.get("http://localhost:8000/api/v1/users");
         setUsers(response.data);
       } catch (error) {
         console.error("Error fetching users:", error);
