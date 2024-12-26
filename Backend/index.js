@@ -16,7 +16,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://frontend-umber-chi.vercel.app/", // Your frontend link
+      "https://frontend-4xrayjtou-chinni-pavanis-projects.vercel.app//", // Your frontend link
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, // If using cookies or authentication headers
