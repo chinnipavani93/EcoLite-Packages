@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
