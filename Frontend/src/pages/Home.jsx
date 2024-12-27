@@ -1,4 +1,5 @@
-import React, { useRef, useEffect, useState } from "react";
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  import React, { useRef, useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import GoalsPage from "./goals";
